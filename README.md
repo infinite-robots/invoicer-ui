@@ -106,7 +106,8 @@ When code has been reviewed (if necessary) select the option 'Squash and Merge'
 
 # 4.0 Github Kanban Board
 
-Link to UNDRGRND Github Kanban Board: https://trello.com/b/Eawz2533
+Link to Invoicer UI Github Kanban Board:
+https://github.com/infinite-robots/invoicer-ui/projects/1
 
 <div id="4.1" />
 
