@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import About from './views/About.vue';
+import Auth from './views/Auth.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -13,9 +14,21 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
+      path: '/auth',
+      name: 'auth',
+      component: Auth,
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.name === 'auth') {
+    next();
+  } else if (router.app.$auth.isAuthenticated()) {
+    next();
+  } else {
+    router.app.$auth.login();
+  }
+});
+
+export default router;

@@ -3,6 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
+import auth from './services/auth';
+
+Vue.use(auth);
 
 Vue.config.productionTip = false;
 
