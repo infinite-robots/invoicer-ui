@@ -2,6 +2,9 @@
 
 The UI for the Infinite Robots Invoicer project.
 
+## Getting started
+
+This is a [vue.js](https://vuejs.org/v2/guide/) project. Install the dependencies with `npm install` and then `npm run dev` to serve the project locally.
 
 <div id="contents" />
 
